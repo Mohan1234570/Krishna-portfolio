@@ -10,10 +10,12 @@ import Achievements from './components/Achievements'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import './App.css'
+import ProfileBar from './components/ProfileBar'
 
 function App() {
   return (
     <div className="App">
+      <ProfileBar />
       <Navbar />
       <Hero />
       <About />

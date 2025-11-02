@@ -25,16 +25,37 @@
   align-items: center;
 }
 
+/* ✅ Logo container — image + text */
 .nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+}
+
+.logo-img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  border-radius: 10px; /* optional for rounded logo corners */
+  transition: transform 0.3s ease;
+}
+
+.nav-logo:hover .logo-img {
+  transform: scale(1.1);
+}
+
+/* ✅ Gradient text for brand name */
+.logo-text {
   font-size: 1.8rem;
   font-weight: 700;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  cursor: pointer;
 }
 
+/* --- Navigation Links --- */
 .nav-menu {
   display: flex;
   list-style: none;
@@ -74,6 +95,7 @@
   width: 100%;
 }
 
+/* --- Mobile Menu --- */
 .mobile-menu-icon {
   display: none;
   color: var(--text-primary);
@@ -110,6 +132,7 @@
   background: rgba(108, 99, 255, 0.1);
 }
 
+/* --- Responsive --- */
 @media (max-width: 768px) {
   .nav-menu {
     display: none;
@@ -121,5 +144,10 @@
 
   .mobile-menu {
     display: flex;
+  }
+
+  /* Optional: hide logo text, keep only icon on mobile */
+  .logo-text {
+    display: none;
   }
 }

@@ -41,11 +41,19 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="nav-container">
+        {/* ✅ Logo section */}
         <motion.div
           className="nav-logo"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
+          onClick={() => scrollToSection('#home')}
+          style={{ cursor: 'pointer' }}
         >
+          <img
+            src="/images/logo.png"  // 👈 Place your logo file in public/images/logo.png
+            alt="Logo"
+            className="logo-img"
+          />
           <span className="logo-text">MKG</span>
         </motion.div>
 
